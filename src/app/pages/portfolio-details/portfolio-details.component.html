@@ -1,0 +1,132 @@
+<div class="header">
+    <div class="content">
+      <h1>Portfolio</h1>
+    </div>
+  </div>
+
+  <!---product-details-->
+  <section class="product-details-area">
+    <div class="container">
+      <div class="product-details-main">
+        <!---product-title-->
+        <div class="product-title">
+          <h2>{{portfolio.name}}</h2>
+        </div>
+
+        <!---product-description-main-->
+        <div class="product-description-main">
+          <div class="description">
+            <div class="product-other-details-main">
+
+              <p>From the designers and engineers who are creating the next generation of web and mobile experiences, to anyone putting a website together for the
+                first time. We provide elegant solutions that set new standards for online publishing.</p>
+              <p>Digital technology has made our world more transparent and interconnected, posing new challenges and opportunities for every business.
+                A holistic, user-centric perspective is what truly sets one apart.</p>
+
+              <div class="other-details">
+                <span>Project Name</span>
+                <h4>{{portfolio.name}}</h4>
+              </div>
+<!--              <div class="other-details">-->
+<!--                <span>Client</span>-->
+<!--               <h4>{{portfolio.client}}</h4>-->
+<!--              </div>-->
+<!--              <div class="other-details">-->
+<!--                <span>Our Role</span>-->
+<!--                 <h4>{{portfolio.role}}</h4> -->
+<!--              </div>-->
+              <div class="share-social">
+                <ul>
+                  <li><span>Share</span></li>
+                  <li><a href="https://twitter.com/share?url=[post-url]&text=https://api.softlabit.com/portfolio/{{slug}}"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.facebook.com/sharer.php?u=https://api.softlabit.com/portfolio/{{slug}}"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://www.linkedin.com/shareArticle?url=[post-url]&title=https://api.softlabit.com/portfolio/{{slug}}"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+              </div>
+              <div class="other-details">
+                <span>Website Link</span>
+                <a target="_blank" href="{{portfolio.websiteUrl}}">{{portfolio.name}}</a>
+              </div>
+
+            </div>
+
+
+          </div>
+          <!---product-other-details-->
+
+          <!--product-img-->
+          <div class="product-img">
+            <img src="{{portfolio.image}}" alt="">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---section-1-->
+  <section class="section-1">
+    <div class="container">
+      <div class="section1-main">
+        <!---solution-->
+        <div class="section1-details">
+          <h3>Solution</h3>
+          <p>{{portfolio.solution}}</p>
+        </div>
+        <!---solution-->
+        <div class="section1-details">
+          <h3>Impact</h3>
+          <p>{{portfolio.impact}}</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!---section3-area-->
+  <section class="section-2">
+    <div class="container">
+      <div class="section2-main">
+        <h3>Features</h3>
+        <ul *ngFor="let data of portfolio?.features">
+          <li><span><i class="fa fa-check"></i></span> <small>{{data}}</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!---section3-->
+  <section class="section-3">
+    <div class="container">
+      <!---section3-title---->
+      <div class="section3-title">
+        <h3>Technologies Used</h3>
+      </div>
+      <!---section3-details-->
+      <div class="section3-details">
+        <ul class="techLi" *ngFor="let data of portfolio?.technologies">
+          <li ><span ><i class="fa fa-check-circle"></i></span> <small>{{data?.name}}</small></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!---section4-->
+  <section class="section-4">
+    <div class="container">
+      <!---section4-title-->
+      <div class="section4-title img-fluid">
+        <h3>Project Highlights</h3>
+      </div>
+      <!--section4-main-->
+      <div class="section4-main" >
+        <!---section4-img-->
+        <div class="section4-img" *ngFor="let data of portfolio?.images">
+          <img class="projectHI" src="{{data}}" alt="">
+        </div>
+      </div>
+      <!---contact-btn-->
+      <div class="contact-btn">
+        <a [routerLink]="['/contact']">Contact Us</a>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,35 @@
+<!---search-box-area  -->
+<div class="container">
+  <div class="section-1-main">
+    <div class="form-container">
+    <input #searchInput id="searchInput" class="tw" type="text" placeholder="Search in certificate info..." [(ngModel)]="searchQuery" required type="text"
+        placeholder="Search what you need..." />
+      <button (click)="searchClick()" > Validate</button>
+    <!-- <form class="search-box-area" [class.search-box-active]="searchBar" #searchForm=ngForm> -->
+      <!-- <button class="search-icon" (click)="onClickSearchArea($event)"><i class="las la-search"></i></button> -->
+      <!-- <input #searchInput id="searchInput" class="tw" type="text" placeholder="Search in softlab course..."
+        (focus)="handleFocus($event)" name="searchTerm" autocomplete="off" ngModel required type="text" value=""
+        placeholder="Search what you need..." />
+      <ul id="auto-suggestion" class="auto-complete-box"
+        [ngClass]="searchProducts.length > 0 && isOpen ? 'active' : ''">
+        <li class="list-view" *ngFor="let data of searchProducts" (click)="onSelectItem(data)"> -->
+          <!-- <img
+            class="img-thumb"
+            [src]="
+              data.images && data.images.length > 0
+                ? data.images[0]
+                : '/assets/images/placeholder/test.png'
+            "
+            [alt]="data?.title"
+          /> -->
+          <!-- <div class="desc">
+            <h3>{{ data?.certificateNumber }}</h3>
+          </div>
+        </li>
+      </ul>
+      <button (click)="searchBoxHide()"><i class="fa fa-xmark"></i></button>
+    </form> -->
+  </div>
+  </div>
+  
+</div>

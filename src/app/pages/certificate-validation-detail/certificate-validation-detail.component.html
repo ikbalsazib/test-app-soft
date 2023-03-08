@@ -1,0 +1,75 @@
+<div class="section-1" *ngIf="certificate">
+
+    <div class="container">
+        <div class="section-1-main">
+
+            <div class="logo">
+                <img src="../../../assets/images/png/Logo-SL.png" alt="">
+            </div>
+            <div class="logo-bottom">
+                <img src="../../../assets/images/png/Logo-SLA.png" alt="">
+            </div>
+            <div class="ct-right">
+                <div class="ct-right-main">
+                    <img src="../../../assets/images/png/certificate-no-seal.png" alt="">
+                    <h2>COURSE <br>
+                        CERTIFICATE</h2>
+                    <div class="ct-bottom">
+                        <p>Certificate no.</p>
+                        <p class="sla">SLA-{{certificate?.certificateNumber}}</p>
+                    </div>
+                </div>
+            </div>
+            <div class="ct-bottom-left">
+                <img src="../../../assets/images/png/sign.jpeg" alt="">
+            </div>
+            <div class="ct-main">
+                <p class="top">This is to certify that</p>
+                <p class="dot">{{certificate?.name}}</p>
+                <div class="div-text">
+                    <p class="label">date of birth</p>
+                    <p class="dot">{{certificate?.dateOfBirth | date}}</p>
+                </div>
+                <div class="div-text">
+                    <p class="label">daughter/son of</p>
+                    <p class="dot">{{certificate?.fatherName}}</p>
+                </div>
+                <div class="div-text">
+                    <p class="label">and</p>
+                    <p class="dot">{{certificate?.motherName}}</p>
+                </div>
+                <div class="div-text">
+                    <p class="label">has completed a</p>
+
+                    <p class="dot">{{certificate?.courseDuration}}</p>
+                    <p class="label">moth tranning of</p>
+                </div>
+                <p class="dot">{{certificate?.courseName}}</p>
+                <div class="div-text">
+                    <p class="label">issue date</p>
+                    <p class="dot">{{certificate?.issueDate | date}}</p>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="section-2" *ngIf="!certificate && !isLoading">
+    <div class="container">
+        <div class="section-2-main">
+            <img src="../../../assets/images/png/Certificate-Could-Not-Be-Found-VPN-Error.webp" alt="">
+            <!-- <a routerLink="/certificate-validation">Back to Certificate Validation</a> -->
+            <a routerLink="/certificate-validation" class="custom-btn btn-15">Back to Certificate Validation</a>
+        </div>
+    </div>
+</div>
+
+
+<!-- LOADING TEMPLATE -->
+<ngx-spinner bdColor="rgba(0, 0, 0, 0.5)" size="medium" color="#fff" type="ball-atom" [fullScreen]="false">
+    <p style="color: white"> Loading... </p>
+</ngx-spinner>

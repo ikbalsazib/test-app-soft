@@ -1,0 +1,424 @@
+<div class="section-1">
+  <div class="container">
+    <div class="section-1-main">
+      <div class="banner-main-div">
+        <div class="banner-section-container" *ngFor="let data of showcase">
+          <div class="banner__content">
+            <h1 class="banner__title">{{ data.title }}</h1>
+            <p class="banner_description">
+              {{ data.description }}
+            </p>
+
+            <div class="btn-group">
+              <a routerLink="coming-soon">Learn More</a>
+              <a routerLink="contact" class="active">Contact us</a>
+            </div>
+          </div>
+          <div class="banner__feature-image">
+            <img [src]="data?.image" alt=""/>
+          </div>
+        </div>
+
+        <div class="company-div">
+          <div
+            class="banner__brand-logo-wrapper wow fadeInUp"
+            style="visibility: visible"
+          >
+            <ul class="banner__brand-logos" *ngFor="let data of tag">
+              <li class="tag-container">
+                <img decoding="async" [src]="data?.image" alt="Brand #1"/>
+                <p>{{ data?.name }}</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Reason Section1 -->
+<div class="section-2">
+  <div class="container">
+    <div class="section-2-main">
+      <div class="section-2-head">
+        <h2 class="section-title">Why Select Softlab IT ?</h2>
+        <p class="description">
+          For growing up your startup or stable business or developing a unique idea <br> we can support technology because we have,
+        </p>
+      </div>
+      <div class="box-container">
+        <div class="box" *ngFor="let data of why">
+          <div class="color-div"></div>
+          <div class="count-number">
+            <span class="counter">{{ data?.title }}</span>
+          </div>
+          <div class="count-info">
+            <h3 class="count-title">{{ data?.subTitle }}</h3>
+            <p class="count-description">
+              {{ data?.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Reason Section2 -->
+
+<div class="section-3">
+  <div class="container">
+    <div class="section-3-main">
+      <div class="section-3-left">
+        <h2>Go beyond with us!</h2>
+        <p>Looking for a great team? we are here to succeed in your dream idea in real life.</p>
+
+        <div class="inner-flex">
+          <div class="inner-grid">
+            <div class="icon-side">
+              <i
+                style="background-color: #175cff; border-color: #175cff"
+                class="fa-solid fa-globe"
+              ></i>
+            </div>
+
+            <div class="text-side">
+              <h3>Faster Website Development</h3>
+              <p>
+                A faster SEO-friendly website is very important, We provide the best-performance website with the latest SPA technology.
+              </p>
+            </div>
+          </div>
+          <div class="inner-grid">
+            <div class="icon-side">
+              <i
+                style="background-color: #f25767; border-color: #f25767"
+                class="fa-solid fa-cart-shopping"
+              ></i>
+            </div>
+
+            <div class="text-side">
+              <h3>E-commerce Solutions</h3>
+              <p>
+                On a worldwide basis, We provide the best e-commerce solutions like amazon, aliexpress, daraz, etc.
+              </p>
+            </div>
+          </div>
+
+          <div class="inner-grid">
+            <div class="icon-side">
+              <i
+                style="background-color: #0c9d46; border-color: #0c9d46"
+                class="fa-sharp fa-solid fa-shop"
+              ></i>
+            </div>
+
+            <div class="text-side">
+              <h3>ERP Inventory Management</h3>
+              <p>
+                Our simple & user friendly ERP can run your business smoothly
+              </p>
+            </div>
+          </div>
+
+          <div class="inner-grid">
+            <div class="icon-side">
+              <i
+                style="background-color: #fb8033; border-color: #fb8033"
+                class="fa-solid fa-mobile-screen-button"
+              ></i>
+            </div>
+
+            <div class="text-side">
+              <h3>Mobile App Development</h3>
+              <p>
+                Mobile apps attract users to your business. We develop native and hybrid budget-friendly mobile apps.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="section-3-right">
+        <div class="image">
+          <img
+            src="/assets/images/static/our-service-feature.webp"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Reason Section3 -->
+
+<!-- END Reason Section4 -->
+<div class="empty" id="service"></div>
+<div class="section-5">
+  <div class="container">
+    <div class="section-5-main">
+      <div class="heading">
+        <h2 class="section-title">
+          Best Services Grow Your <br/>
+          Business Value
+        </h2>
+      </div>
+      <div class="grid">
+        <div class="grid-item-one">
+          <div class="item-one-upper-content">
+            <div class="icon">
+              <i class="far fa-chart-bar"></i>
+            </div>
+            <div class="content">
+              <h3>Development with Full security</h3>
+              <p>
+                Development refers to the process of creating, designing and building software, applications or systems.
+              </p>
+
+              <p>
+                Balancing development and security is crucial to ensure the success and protection of the technology being built.
+              </p>
+            </div>
+          </div>
+          <br/>
+          <div class="item-one-lower-content">
+            <h4>Included with...</h4>
+            <ul>
+              <li>
+                <i class="fa-solid fa-square-check"></i>
+
+                <span class="list-text">Digitizing business at scale</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-square-check"></i>
+
+                <span class="list-text">Microservices based architecture</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-square-check"></i>
+
+                <span class="list-text">Rapid application development</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-square-check"></i>
+
+                <span class="list-text">Scalable websites, shops and marketplaces</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-square-check"></i>
+
+                <span class="list-text">Running applications and infrastructure</span>
+              </li>
+
+              <li>
+                <i class="fa-solid fa-square-check"></i>
+
+                <span class="list-text">User-friendly UI and API security</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="grid-container-1">
+          <div class="upper-grid" *ngFor="let data of ourService.slice(0,4)">
+            <div class="icon">
+              <i
+                style="
+                  color: #5cc9a7;
+                  background-color: #def4ed;
+                  border-color: #def4ed;
+                "
+                class="far fa-file-alt"
+              ></i>
+            </div>
+
+            <div class="content">
+              <h3>{{data?.name}}</h3>
+              <p>{{data?.shortDescription}}</p>
+            </div>
+
+            <div class="view-tag">
+              <a [slug]="data?.slug" [routerLink]="['/service-details', data.slug]">
+                <span>
+                  <span class="details-text">View Details</span>
+                  <span class="icon-2">
+                    <i class="fas fa-arrow-right"></i>
+                  </span>
+                </span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END Reason Section5 -->
+
+<div class="section-6">
+  <div class="container">
+    <div class="section-6-main">
+      <div class="instant">
+        <h2>Our Basic Process</h2>
+        <p>
+          We maintain some steps from starting development to ending development.<br/>
+          below is a basic flow of our process.
+        </p>
+      </div>
+      <div class="card-section">
+        <div class="card">
+          <div class="icon-contant">
+            <h1>1</h1>
+          </div>
+          <div class="box-contant">
+            <h3>Business Requirements Analysis</h3>
+            <p>Software Requirements Analysis is the process of gathering and defining the needs and constraints.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon-contant">
+            <h1>2</h1>
+          </div>
+          <div class="box-contant">
+            <h3>Prototype & Architecture</h3>
+            <p>A Prototype is a preliminary model or sample of a product, used for testing and demonstration</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon-contant">
+            <h1>3</h1>
+          </div>
+          <div class="box-contant">
+            <h3>Development & Unit Testing</h3>
+            <p>Development involves creating and coding software, while Unit Testing is the process of testing.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="icon-contant">
+            <h1>4</h1>
+          </div>
+          <div class="box-contant">
+            <h3>Review, Release & Update</h3>
+            <p>Software's quality, functionality, and compliance with requirements, Release makes the software available to users.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-7">
+  <div class="container">
+    <div class="section-7-main">
+      <div class="section-7-top">
+        <div class="left-side-div">
+          <div class="section-heading">
+            <h2 class="section-title">
+              Some of our Esteemed Clients
+            </h2>
+            <div class="description">
+              <p>
+                Our esteemed clients include e-commerce companies, leading financial institutions, and international reputed companies.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="right-side-div">
+          <a routerLink="coming-soon">
+            View More
+            <span class="material-symbols-outlined"> arrow_right_alt </span>
+          </a>
+        </div>
+      </div>
+      <div class="brand-container-pc">
+        <div class="brand-container">
+          <app-brand-card
+            [data]="data"
+            *ngFor="let data of clients"
+          ></app-brand-card>
+        </div>
+      </div>
+      <div class="brand-container-mobile">
+        <div class="swiperr">
+          <div class="swiper-parent">
+            <swiper
+              [loop]="true"
+              [speed]="1500"
+              [autoplay]="{
+                delay: 2000
+              }"
+              [slidesPerView]="'auto'"
+              [navigation]="true"
+              [spaceBetween]="20"
+              [breakpoints]="{
+                '0': {
+                  slidesPerView: 2
+                },
+                '430': {
+                  slidesPerView: 3.2
+                },
+                '520': {
+                  slidesPerView: 4
+                },
+                '700': {
+                  slidesPerView: 5
+                }
+              }"
+              class="swiper-banner mySwiper"
+            >
+              <ng-container>
+                <ng-template swiperSlide *ngFor="let data of clients">
+                  <div class="swipe">
+                    <app-brand-card [data]="data"></app-brand-card>
+                  </div>
+                </ng-template>
+              </ng-container>
+            </swiper>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section-8">
+  <div class="container">
+    <div class="section-8-main">
+      <div class="section-8-main-top">
+        <h2 class="section-title">What They Say About Us</h2>
+        <div class="description">
+          <p>
+            Some valuable feedback from clients
+          </p>
+        </div>
+      </div>
+      <div class="swiperr">
+        <div class="swiper-parent">
+          <swiper
+            [loop]="true"
+            [grabCursor]="true"
+            [speed]="1500"
+            [autoplay]="{
+              delay: 2000
+            }"
+            [slidesPerView]="'auto'"
+            [navigation]="true"
+            [spaceBetween]="20"
+            [centeredSlides]="true"
+            class="swiper-banner mySwiper"
+          >
+            <ng-container>
+              <ng-template swiperSlide *ngFor="let data of reviews">
+                <div class="swipe">
+                  <app-review-card [data]="data"></app-review-card>
+                </div>
+              </ng-template>
+            </ng-container>
+          </swiper>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

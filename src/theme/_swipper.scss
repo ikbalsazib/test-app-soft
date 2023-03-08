@@ -1,0 +1,133 @@
+/*** swipper ***/
+::ng-deep.carousel .swiper-pagination-bullet-active{
+    background-color: #f53489!important;
+    // border-radius: 50%;
+    width: 8px;
+    height: 8px;
+    opacity: 1!important;
+  }
+  ::ng-deep.carousel .swiper-pagination-bullet{
+  background-color: #c6c6c6;
+  opacity: 1;
+  }
+  ::ng-deep.swiper-button-next{
+    font-size: 20px;
+  }
+  ::ng-deep.swiper-button-next{
+    right: 0px;
+  }
+  ::ng-deep.swiper-button-prev{
+    left: 0px;
+  }
+  ::ng-deep.banner-carousel .swiper-button-next{
+    right: 40px!important;
+  }
+  ::ng-deep.banner-carousel .swiper-button-prev{
+    left: 40px!important;
+  }
+
+  ::ng-deep.swiper-button-next,::ng-deep.swiper-button-prev{
+    background-color: #FFFF;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 35px;
+    height: 35px;
+    top: 50%;
+    right: 10px;
+    z-index: 20;
+    border-radius: 5px;
+    transition: all 0.3s linear;
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  ::ng-deep.swiper-button-prev{
+    left: 10px;
+  }
+  ::ng-deep.banner-carousel .swiper-button-next,::ng-deep.banner-carousel .swiper-button-prev{
+    width: 40px!important;
+    height: 40px!important;
+  }
+
+  @media(max-width:500px){
+    ::ng-deep.banner-carousel .swiper-button-next{
+      right: 10px!important;
+    }
+    ::ng-deep.banner-carousel .swiper-button-prev{
+      left: 10px!important;
+    }
+    ::ng-deep.banner-carousel .swiper-button-next,::ng-deep.banner-carousel .swiper-button-prev{
+      width: 35px!important;
+      height: 35px!important;
+    }
+  }
+  .mySwiper:hover ::ng-deep.swiper-button-next,.mySwiper:hover ::ng-deep.swiper-button-prev{
+    visibility: visible;
+    opacity: 1;
+  }
+  ::ng-deep.swiper-button-next:after,
+  ::ng-deep.swiper-button-prev:after{
+    content: "\f054";
+    font-size: 17px;
+    font-weight: 600;
+    font-family: "Font Awesome 5 Free";
+    display: block;
+    color: #000;
+    transition: all 0.3s linear;
+  }
+  ::ng-deep.swiper-button-prev:after{
+    content: '\f053';
+  }
+  ::ng-deep.swiper-button-next:hover,::ng-deep.swiper-button-prev:hover{
+    border-color:transparent;
+    background-color: #175cff;
+  }
+  ::ng-deep.swiper-button-next:hover::after,
+  ::ng-deep.swiper-button-prev:hover::after{
+    color: #fff!important;
+  }
+  ::ng-deep.swiper-button-next.swiper-button-disabled,::ng-deep.swiper-button-prev.swiper-button-disabled{
+    z-index: 20;
+    visibility: hidden!important;
+    opacity: 0!important;
+    transition: all 0.3s linear;
+  }
+  ::ng-deep.small-carousel .mySwiper {
+    padding: 0px 30px;
+  }
+  ::ng-deep.small-carousel ::ng-deep.swiper-button-next{
+    right: 0px;
+    width: 25px;
+    height: 25px;
+    top: 60%;
+  }
+  ::ng-deep.small-carousel ::ng-deep.swiper-button-prev{
+    left: 0px;
+    width: 25px;
+    height: 25px;
+    top: 60%;
+  }
+
+
+  ::ng-deep.carousel .swiper{
+  padding-bottom: 50px;
+  }
+  ::ng-deep.carousel .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction{
+  bottom:0px;
+  background: #f9f9f9;
+  width: 100%;
+  padding: 5px;
+  }
+  ::ng-deep.swiper-slide{
+  padding: 10px 0px;
+  box-sizing: border-box;
+  }
+  ::ng-deep.banner-carousel .swiper-slide{
+    padding: 0px;
+  }
+
+  ::ng-deep.coutomer-slide .swiper-slide{
+    padding: 30px 5px 10px 5px;
+    box-sizing: border-box;
+  }

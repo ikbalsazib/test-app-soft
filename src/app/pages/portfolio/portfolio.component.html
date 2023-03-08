@@ -1,0 +1,49 @@
+<div class="header">
+  <div class="content">
+    <h1>PORTFOLIO</h1>
+  </div>
+</div>
+
+<div class="sm-gap"></div>
+
+
+<div class="grid-filter-wrap" >
+  <span class="filter-item" [class.active]="selectedCatButton === -1"   (click)="getAllPortfolio(-1)">All</span>
+  <span class="filter-item" *ngFor="let data of portfolioCategory; let i = index"  [class.active]="selectedCatButton === i" (click)="getProductByPortfolioCategory(data.name, i)">{{data?.name}}</span>
+
+</div>
+<section class="section-1">
+  <div class="container">
+    <!---section-1-main-->
+    <div class="section1-main">
+      <!--services-card-->
+
+    <div class="img-card iCard-style4"  [routerLink]="['/portfolio-details', data?.slug]" *ngFor="let data of portfolio | sort: 'priority'; let i = index">
+      <div class="card-content">
+          <div class="card-image">
+              <img [src]="data?.image" [alt]="data?.slug"/>
+          </div>
+        <div class="color-overlay"></div>
+          <div class="card-title"><span>{{data?.name}}</span>
+          </div>
+      </div>
+
+<!--      <div class="card-link">-->
+<!--          <a  title="Read Full">-->
+<!--              <span>Read More</span>-->
+<!--          </a>-->
+<!--      </div>-->
+  </div>
+
+      <!--services-card-end-->
+    </div> <!---section-1-main-end-->
+
+    <!---Load-More-->
+    <!-- <div class="load-more-btn" *ngIf="portfolio.length !== totalPortfolio"> -->
+    <div class="load-more-btn" >
+      <a  (click)="loadButtion()" mat-button>Load more</a>
+    </div>
+  </div>
+</section>
+
+

@@ -1,0 +1,189 @@
+.container {
+  width: 100%;
+}
+.section-1-main{
+  background: #4B378D;
+}
+
+
+.card-footer{
+  height: auto;
+  padding: 50px 0;
+
+  .content-area{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+
+    .social {
+      flex: 1;
+
+      .brand-logo {
+        margin: auto;
+        width: 130px;
+        height: 160px;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+        height: 100%;
+        margin-top: 8px;
+      }
+
+      .icon-link {
+        text-align: center;
+        ul {
+          list-style-type: none;
+          padding: 0;
+          width: 100%;
+
+          li {
+            display: inline;
+            a {
+              display: inline-block;
+              color: #000;
+              padding: 8px 16px;
+              text-decoration: none;
+
+              .icon-only {
+                width: 20px;
+              }
+
+              .icon-only.small {
+                width: 24px;
+              }
+            }
+          }
+        }
+
+      }
+
+    }
+  }
+
+  .address{
+    flex: 1;
+    text-align: center;
+
+    .top {
+      margin-bottom: 25px;
+    }
+
+
+    h2 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p{
+      color: #fff;
+      font-size: 15px;
+    }
+  }
+
+  .call{
+    flex: 1;
+    text-align: center;
+
+    h2 {
+      color: #fff;
+      font-size: 24px;
+      margin-bottom: 8px;
+    }
+
+    ul {
+      list-style-type: none;
+      padding: 0;
+      width: 100%;
+
+      li {
+        display: block;
+        font-size: 15px;
+        color: #fff;
+        line-height: 1.7;
+
+        i {
+          color: #ffffff;
+        }
+      }
+    }
+
+  }
+}
+.cp-text {
+  text-align: center;
+  padding: 25px 0;
+
+  p{
+    font-weight: 400;
+    color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+  }
+}
+
+@media only screen and (max-device-width: 768px) {
+  //.cp-text {
+  //  p{
+  //    font-size: 0.9rem;
+  //  }
+  //}
+
+  .card-footer{
+
+    .content-area{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .social {
+        flex: 1;
+        margin-bottom: 25px;
+
+        .brand-logo {}
+        img {}
+
+        .icon-link {
+          margin-top: 12px;
+          ul {}
+        }
+
+      }
+    }
+
+    .address{
+      margin-bottom: 15px;
+
+      .top {}
+
+      h2 {
+        font-size: 24px;
+      }
+
+      p{
+        font-size: 15px;
+      }
+    }
+
+    .call{
+      margin-top: 15px;
+      h2 {
+        font-size: 24px;
+      }
+
+      ul {
+        li {
+          font-size: 15px;
+          i {}
+        }
+      }
+
+    }
+  }
+}
+

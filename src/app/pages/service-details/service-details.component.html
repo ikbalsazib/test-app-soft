@@ -1,0 +1,118 @@
+<div class="gap"></div> <!--Main Gap from Top -->
+
+<main>
+  <div class="header">
+    <div class="img-fluid">
+      <img  [src]="ourService?.image !== null ? ourService?.image : '/assets/images/png/course-image-placeholder.png'" alt="">
+      <div class="text-card">
+        <h1>{{ourService?.name}}</h1>
+        <p class="desc">
+          {{ourService?.shortDescription}}
+        </p>
+        <div class="action">
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <article class="container" #article>
+    <div class="main-content">
+      <div class="head-intro">
+        <div class="desc" [innerHTML]="ourService?.description | safeHtmlCustom"></div>
+      </div>
+      <div class="offer-info">
+        <div class="left-point">
+          <h1 class="big-title">Offered Services</h1>
+        </div>
+        <div class="right-point">
+          <ul>
+            <li *ngFor="let offer of ourService?.offeredServices">{{offer}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="swiperr">
+        <div class="swiper-parent">
+          <swiper [loop]="true" [speed]="1500" [autoplay]="{
+              delay: 2000
+            }" [slidesPerView]="'auto'" [navigation]="false" [spaceBetween]="20" [breakpoints]="{
+              '0': {
+                slidesPerView: 2
+              },
+              '430': {
+                slidesPerView: 3.2
+              },
+              '520': {
+                slidesPerView: 4
+              },
+              '700': {
+                slidesPerView: 5
+              }
+            }" class="swiper-banner mySwiper">
+            <ng-container>
+              <ng-template swiperSlide *ngFor="let data of ourService?.technologies">
+                <div class="swipe">
+                  <img [src]="data?.image" alt="">
+                  <!-- <h6>{{data.name}}</h6> -->
+                </div>
+              </ng-template>
+            </ng-container>
+          </swiper>
+        </div>
+      </div>
+
+
+      <div class="industry-info">
+        <div class="left-point">
+          <h1>Industries</h1>
+        </div>
+        <div class="right-point">
+          <ul>
+            <li *ngFor="let industry of ourService?.industries">{{industry}}</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="reason-to-choose">
+        <div class="head">
+          <h1>Top Reasons to Choose SoftLab IT</h1>
+        </div>
+
+        <div class="main">
+          <div class="card" *ngFor="let reason of ourService?.reasonsToChoose">
+            <div class="header">
+              <div class="img-icon"[style.background-color]="reason?.color">
+                <mat-icon>{{reason.iconName}}</mat-icon>
+              </div>
+              <div class="heading">
+                <h2>{{reason.name}}</h2>
+              </div>
+            </div>
+            <div class="content">
+              <p>{{reason.description}}</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </article>
+</main>
+
+<div class="sm-gap"></div>
+
+<!-- TEMPLATE -->
+<!-- <ngx-spinner style="width: 100vw; height: 100vh" bdColor="rgba(0,0,0,0.25)" size="medium" color="#fff"
+             type="ball-clip-rotate" [fullScreen]="true"><p style="color: white"> Loading... </p></ngx-spinner> -->
+
+<div class="call-us">
+  <div class="container-md">
+    <div class="text-view">
+      <h2>Would like to start a project with us?</h2>
+      <p>Feel free to drop an email (softlabit.info@gmail.com) and share your idea.</p>
+    </div>
+    <div class="action">
+      <a  href="tel:+8801648879969"> <i class="fa-sharp fa-solid fa-phone"></i> +8801648879969</a>
+    </div>
+  </div>
+</div>

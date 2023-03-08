@@ -1,0 +1,82 @@
+<div class="header">
+  <div class="container">
+    <div
+      class="header-main-container"
+      [ngClass]="headerFixed ? 'header-fixed' : ''"
+    >
+      <div class="container">
+        <div class="header-menu-setion">
+          <div class="logo-div" routerlink="/">
+            <img routerLink="/" src="../../assets/brand/primary-logo-white-wide.webp" alt="" />
+          </div>
+          <div
+            class="header-menu-div"
+            [ngClass]="headerFixed ? 'header-menu-fixed' : ''"
+          >
+            <a routerLink="/" >Home</a>
+            <a routerLink="/" fragment="service" >Services</a>
+<!--            <a routerLink="/coming-soon">Product</a>-->
+            <a href="https://course.softlabit.com/" target="_blank">Academy</a>
+<!--            <a routerLink="/coming-soon">Offers</a>-->
+            <a routerLink="/contact">Contact</a>
+<!--            <a routerLink="/coming-soon">About</a>-->
+            <a routerLink="/portfolio">Portfolio</a>
+            <a routerLink="/certificate-validation">Certificate Validation</a>
+            <button routerLink="/coming-soon" class="get-Started">Career </button>
+          </div>
+
+          <div class="mobile-menu-div">
+            <button
+              *ngIf="headerFixed === false"
+              class="menu-btn"
+              (click)="ownUserProfile()"
+              [ngClass]="headerFixed ? 'header-menu-fixed' : ''"
+            >
+              <span class="menue-icon material-symbols-outlined"> menu </span>
+            </button>
+            <button
+              *ngIf="headerFixed === true"
+              class="menuee-btn"
+              (click)="ownUserProfile()"
+              [ngClass]="headerFixed ? 'header-menu-fixed' : ''"
+            >
+              <span class="menue-icon material-symbols-outlined"> menu </span>
+            </button>
+
+            <div
+              class="user-menu UserMenuMainDiv"
+              [class]="
+                userMenu == true ? 'userMenu-active' : 'userMenu-inactive'
+              "
+            >
+              <div class="logo-main-div">
+                <div class="logo-div">
+                  <img routerLink="/" src="../../../../assets/images/png/Logo-SL.png" alt="" />
+                </div>
+                <div class="close-div">
+                  <!-- <img src="../../assets/images/logo/logo-color.svg" alt=""> -->
+                  <button class="closeBtn" (click)="ownCloseBtn()">X</button>
+                </div>
+              </div>
+
+              <div class="header-mobile-menu-div">
+                <div class="mobile-menu">
+                  <a (click)="ownCloseBtn()" routerLink="/" >Home</a>
+                  <a (click)="ownCloseBtn()" routerLink="/" fragment="service" >Services</a>
+<!--                  <a routerLink="/coming-soon">Product</a>-->
+                  <a (click)="ownCloseBtn()" href="https://course.softlabit.com/" target="_blank">Academy</a>
+<!--                  <a routerLink="/coming-soon">Offers</a>-->
+                  <a (click)="ownCloseBtn()" routerLink="/contact">Contact</a>
+<!--                  <a routerLink="/coming-soon">About</a>-->
+                  <a (click)="ownCloseBtn()" routerLink="/portfolio">Portfolio</a>
+                  <a (click)="ownCloseBtn()" routerLink="/certificate-validation">Certificate Validation</a>
+<!--                  <button class="get-Started" href="">Apply as Intern</button>-->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
